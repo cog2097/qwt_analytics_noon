@@ -1,0 +1,16 @@
+version: 2
+ 
+sources:
+  - name: raw_qwt ## genric name
+    database: "{{env_var('DBT_QWTDB','QWT_ANALYTICS_DEV')}}"
+    schema: "{{env_var('DBT_RAWSCHEMA','RAW_DEV')}}"
+    tables:
+        - name: customer_raw
+##to use same config file and add multiple table.. we need to add name like this.
+        - name: raw_products
+        - name: raw_orders
+        - name: raw_order_details
+        - name: raw_employee
+        - name: raw_offices
+        - name: raw_shipments
+        - name: raw_suppliers
