@@ -41,7 +41,7 @@ order by 1
  
 select 
 min(ORDERDATE)
-from {{ ref('fct_orders') }}
+from {{ ref('trf_orders') }}
  
 {% endset %}
  
@@ -77,7 +77,7 @@ from {{ ref('fct_orders') }}
  
 select 
 max(ORDERDATE)
-from {{ ref('fct_orders') }}
+from {{ ref('trf_orders') }}
  
 {% endset %}
  
